@@ -1,0 +1,36 @@
+# Go build artifacts
+/bin/
+/build/
+/dist/
+*.exe
+*.test
+*.out
+
+# Go modules cache (if accidentally vendored)
+vendor/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Environment variables
+.env
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Goose migrations cache (optional)
+db/migrations/*.lock
+
+# Docker volumes and artifacts
+*.pid
+*.sock
+
+# .goose binary (if compiled locally)
+goose
