@@ -4,8 +4,8 @@
 up:
 	docker compose up
 
-build:
-	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build --progress=plain
+docker-build:
+	COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker compose build --progress=plain
 
 down:
 	docker compose down
