@@ -14,6 +14,10 @@ func SetupRouter(db *gorm.DB) *gin.Engine {
 	{
 		api.GET("/content-types", func(c *gin.Context) { controllers.GetContentTypes(c, db) })
 		api.POST("/content-types", func(c *gin.Context) { controllers.CreateContentType(c, db) })
+		api.GET("/users", func(c *gin.Context) { controllers.GetAllUsers(c, db) })
+		api.POST("/users", func(c *gin.Context) { controllers.CreateUser(c, db) })
+		api.PUT("/users/:id", func(c *gin.Context) { controllers.UpdateUser(c, db) })
+		api.DELETE("/users/:id", func(c *gin.Context) { controllers.DeleteUser(c, db) })
 	}
 
 	return r
