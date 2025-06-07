@@ -18,6 +18,15 @@ services:
     volumes:
       - .:/app
 
+  web:
+    image: nginx:alpine
+    ports:
+      - "3000:80"
+    volumes:
+      - ./sample:/usr/share/nginx/html
+    depends_on:
+      - app
+
   db:
     image: mysql:8.0
     container_name: mysql
